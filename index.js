@@ -10,12 +10,13 @@
 -MIDDLEWARE => Interceptador => Têm o poder de parar ou alterar dados da requisição
 */
 
-
-const port = 3000
+import cors from 'cors'
+const port = 3001
 const express = require ('express')
 const app = express ()
 app.use (express.json())
 const uuid = require ('uuid')
+app.use (cors())
 
 // EXEMPLO DE MIDDLEWARE 👇
 /*const myFirstMiddleware = (request, response, next) => {
