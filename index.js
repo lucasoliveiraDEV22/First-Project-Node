@@ -11,12 +11,13 @@
 */
 
 import cors from 'cors'
-const port = 3001
+const port = process.env.PORT || 3001
 const express = require ('express')
 const app = express ()
 app.use (express.json())
 const uuid = require ('uuid')
 app.use (cors())
+
 
 // EXEMPLO DE MIDDLEWARE 👇
 /*const myFirstMiddleware = (request, response, next) => {
