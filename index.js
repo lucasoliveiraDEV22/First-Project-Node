@@ -41,6 +41,12 @@ const checkUserId = (request, response, next) => {
 }
 
 const users = []
+
+app.get('/', (request, response) => {
+    //console.log ('A rota foi chamada')
+    return response.json("hello world")
+})
+
 app.get('/users', (request, response) => {
     //console.log ('A rota foi chamada')
     return response.json(users)
